@@ -1,0 +1,174 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(3, 7, 18, 0.8);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  overflow-y: auto;
+}
+
+.modalWindow {
+  background-color: rgba(11, 16, 29, 0.95);
+  backdrop-filter: blur(30px) saturate(180%);
+  -webkit-backdrop-filter: blur(30px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: var(--radius-lg);
+  max-width: 880px;
+  width: 100%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 30px 80px -15px rgba(0, 0, 0, 0.9), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  overflow: hidden;
+}
+
+.modalHeader {
+  padding: 1.25rem 2rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.modalTitle {
+  font-family: var(--font-sans);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.closeBtn {
+  background: rgba(30, 41, 59, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #94a3b8;
+  padding: 0.45rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.closeBtn:hover {
+  background-color: rgba(56, 189, 248, 0.2);
+  border-color: var(--color-accent);
+  color: #ffffff;
+}
+
+.modalBody {
+  padding: 2.5rem 2.5rem;
+  overflow-y: auto;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* Printable Document Sheet */
+.resumeSheet {
+  background-color: #ffffff;
+  border: 1px solid var(--color-border);
+  padding: 2.5rem;
+  box-shadow: var(--shadow-sm);
+}
+
+.sheetHeader {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--color-primary);
+  padding-bottom: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.sheetName {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.sheetContact {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+  text-align: right;
+  line-height: 1.5;
+}
+
+.sheetSection {
+  margin-bottom: 1.5rem;
+}
+
+.sheetSectionTitle {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  border-bottom: 1px solid var(--color-border-dark);
+  padding-bottom: 0.3rem;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.sheetEntry {
+  margin-bottom: 0.85rem;
+}
+
+.sheetEntryHeader {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  color: var(--color-text-main);
+  font-size: 0.92rem;
+}
+
+.sheetSub {
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.sheetScore {
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.modalFooter {
+  padding: 1.25rem 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(15, 23, 42, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+@media (max-width: 650px) {
+  .sheetHeader {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+  .sheetContact {
+    text-align: left;
+  }
+  .modalBody {
+    padding: 1rem;
+  }
+  .resumeSheet {
+    padding: 1.25rem;
+  }
+}
